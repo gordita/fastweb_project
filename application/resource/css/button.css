@@ -1,0 +1,36 @@
+/* See http://nicolasgallagher.com/lab/css3-facebook-buttons/ */
+.CSS_BUTTON,
+.CSS_BUTTON_BLUE {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.375em;
+  border: 1px solid #999;
+  border-bottom-color: #888;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  font: bold 11px/normal 'lucida grande', tahoma, verdana, arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  /* outline: none; */
+  color: #333;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f6f6), to(#e4e4e3));
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #fff;
+}
+
+.CSS_BUTTON_BLUE {
+  border-color: #29447e #29447e #1a356e;
+  color: #fff;
+  background-color: #5B74A8;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+}
+
+.CSS_BUTTON_BLUE:active {
+  border-color: #29447E;
+  background: #4F6AA3;
+  -webkit-box-shadow: none;
+}

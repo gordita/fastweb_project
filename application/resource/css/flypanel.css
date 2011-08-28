@@ -1,0 +1,19 @@
+.CSS_FLY_PANEL_LAUNCH_BUTTON {
+  color: #fff;
+  outline: none;
+  padding: 6px 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.CSS_FLY_PANEL {
+  background: #fff;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+}
+
+.CSS_FLY_PANEL_BODY {
+  overflow: hidden;
+}

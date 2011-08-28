@@ -1,0 +1,120 @@
+.chrome-dockpage .CSS_STACK_ROWS_LAYOUT {
+  background: #e2e9f1;
+}
+
+.chrome-dockpage {
+  border-bottom-color: #e2e9f1 !important;
+}
+
+.CSS_DOCK_ICONS {
+  padding: 12px 0;
+  /*
+  outline: solid 1px blue;
+  outline-offset: -1px;
+  */
+}
+
+.CSS_DOCK_ICONS_LIST {
+  display: block;
+  position: relative;
+}
+
+.CSS_DOCK_ICON {
+  /*
+  -webkit-transition-property: left, top;
+  -webkit-transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+  */
+  display: inline-block;
+  height: 90px;
+  margin: auto;
+  /*
+  outline: solid 1px blue;
+  outline-offset: -1px;
+  */
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.CSS_ORIENTATION_PORTRAIT .CSS_DOCK_ICON {
+  width: 100px;
+}
+
+.CSS_ORIENTATION_LANDSCAPE .CSS_DOCK_ICON {
+  width: 80px;
+}
+
+.CSS_DOCK_ICONS_LIST .CSS_LINK_FOCUS:after {
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+}
+
+.CSS_DOCK_ICON_LINK:link,
+.CSS_DOCK_ICON_LINK:visited,
+.CSS_DOCK_ICON_LINK:hover,
+.CSS_DOCK_ICON_LINK:active {
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.CSS_DOCK_ICON_IMG {
+  background: none 50% 100% no-repeat;
+  display: block;
+  height: 60px;
+  width: 100%;
+}
+
+.icon-newsfeed {
+  background-image: url(images/friend_feeds.png);
+}
+
+.icon-profile {
+  background-image: url(images/genericfriendicon.png);
+}
+
+.icon-friends {
+  background-image: url(images/all_friends.png);
+}
+
+.icon-messages {
+  background-image: url(images/notifications.png);
+}
+
+.icon-places {
+  background-image: url(images/mypages.png);
+}
+
+.icon-groups {
+  background-image: url(images/groups.png);
+}
+
+.icon-events {
+  background-image: url(images/events.png);
+}
+
+.icon-photos {
+  background-image: url(images/photos_icon.png);
+}
+
+.icon-chat {
+  background-image: url(images/wall_post.png);
+}
+
+.icon-notes {
+  background-image: url(images/note.png);
+}
+
+.CSS_DOCK_ICON_TEXT {
+  color: #000;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}

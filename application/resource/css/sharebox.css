@@ -1,0 +1,101 @@
+.CSS_SHARE_BOX {
+  border-bottom: solid 1px #eee;
+  padding: 4px 0;
+  position: relative;
+  z-index: 10000;
+}
+
+.CSS_SHARE_BOX_TABLE {
+  display: table;
+  width: 100%;
+}
+
+.CSS_SHARE_BOX_TR {
+  display: table-row;
+}
+
+.CSS_SHARE_BOX_TD {
+  display: table-cell;
+  height: 0;
+  vertical-align: middle;
+}
+
+.CSS_SHARE_BOX_TD_START {
+  padding: 0;
+  width: 1px;
+}
+
+.CSS_UPLOAD_PHOTO_ICON {
+  background: url(images/camera_icon.gif) 50% 50% no-repeat;
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -5000px;
+  width: 32px;
+}
+
+.CSS_SHARE_BOX_TD_END {
+  padding: 0 4px 0 0;
+  width: 1px;
+}
+
+/* .CSS_SHARE_BOX_PHOTO, */
+.CSS_SHARE_BOX_TEXT,
+.CSS_SHARE_BOX_SEND {
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 100%;
+  height: 26px;
+  border: solid 1px #ccc;
+  outline: none;
+  padding: 2px 1px;
+}
+
+.CSS_SHARE_BOX_SEND {
+  color: #3B5998;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.CSS_SHARE_BOX_TEXT_WRAP {
+  display: block;
+  height: 33px;
+  position: relative;
+}
+
+.CSS_SHARE_BOX_TEXT {
+  -webkit-transition-property: height, border-color;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+  background: rgba(255, 255, 255, 0.9);
+  display: block;
+  height: 23px;
+  left: 3px;
+  padding-top: 6px;
+  padding-left: 4px;
+  position: absolute;
+  resize: none;
+  right: 0;
+}
+
+.CSS_SHARE_BOX_SEND {
+  height: 26px;
+  top: 0;
+}
+
+.CSS_SHARE_BOX_TEXT:focus {
+  -webkit-box-shadow: 0 1px 5px #aaa;
+  -webkit-box-shadow: inset 3px 3px 3px #eee;
+  border-color: #ff6600;
+}
+
+.CSS_ORIENTATION_PORTRAIT .CSS_SHARE_BOX_TEXT:focus {
+  height: 6em;
+}
+
+.CSS_ORIENTATION_LANDSCAPE .CSS_SHARE_BOX_TEXT:focus {
+  height: 3em;
+}

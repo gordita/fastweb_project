@@ -1,0 +1,19 @@
+application: mytouchface
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static
+  secure: always
+  static_dir: static
+
+- url: /build
+  secure: always
+  static_dir: build
+
+- url: /.*
+  secure: always
+  script: main.py
+
+

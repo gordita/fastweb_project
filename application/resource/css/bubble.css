@@ -1,0 +1,47 @@
+.bubble {
+  background: #fff;
+  border: solid 6px #aaa;
+  border-radius: 12px;
+  border-color: rgba(100, 100, 100, 0.8);
+  box-shadow: 0 2px 4px #aaa;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  text-align: justify;
+  top: 0;
+  white-space: normal;
+  width: 300px;
+}
+
+.bubble-close:link,
+.bubble-close:visited,
+.bubble-close:hover {
+  color: #aa0000;
+  font-family: "Monaco", "Consolas", "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1em;
+  padding: 12px;
+  position: absolute;
+  right: -4px;
+  text-decoration: none;
+  top: -10px;
+}
+
+.bubble-close:hover {
+  color: #ff0000;
+}
+
+.bubble:before {
+  background: #fff;
+  border: solid 6px #aaa;
+  border-radius: 16px 16px 0 0;
+  border-color: rgba(100, 100, 100, 0.8);
+  border-width: 6px 6px 0 6px;
+  color: #fff;
+  content: '.';
+  height: 16px;
+  left: 45%;
+  position: absolute;
+  top: -22px;
+  width: 16px;
+}

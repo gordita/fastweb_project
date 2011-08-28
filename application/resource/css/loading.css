@@ -1,0 +1,38 @@
+.CSS_LOADING_INDICATIOR {
+  margin: 12px 0;
+  white-space: nowrap;
+}
+
+.CSS_LOADING_INDICATIOR_L,
+.CSS_LOADING_INDICATIOR_M,
+.CSS_LOADING_INDICATIOR_R {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: linear;
+  -webkit-transform: scale(0.7);
+  background-color: #e8eef7;
+  border: 1px solid #3B5998;
+  display: inline-block;
+  height: 8px;
+  margin: 0 2px;
+  opacity: 0.1;
+  width: 3px;
+}
+
+.CSS_LOADING_INDICATIOR_L {
+  -webkit-animation-delay: 0.3s;
+}
+
+.CSS_LOADING_INDICATIOR_M {
+  -webkit-animation-delay: 0.4s;
+}
+
+.CSS_LOADING_INDICATIOR_R {
+  -webkit-animation-delay: 0.5s;
+}
+
+@-webkit-keyframes bounce{
+	0%{-webkit-transform: scale(1.2);opacity:1;}
+	100%{-webkit-transform: scale(0.7);opacity:0.1;}
+}

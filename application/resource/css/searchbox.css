@@ -1,0 +1,11 @@
+.CSS_SEARCH_BOX {
+  padding: 6px 10px 6px 6px;
+}
+
+.CSS_SEARCH_BOX_TEXT {
+  -webkit-box-sizing: border-box;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+.CSS_BLUE_BAR {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #3B5998;
+  border: solid 1px #1D4088;
+  color: #3B5998;
+}
+
+.CSS_BLUEBAR_LOGO,
+.CSS_BLUEBAR_BACK {
+  color: #fff !important;
+  display: block;
+  font: bold 18px/100% Lucida Sans, Lucida Grande, arial;
+  left: 0;
+  letter-spacing: -1px;
+  padding: 9px 12px 13px 12px;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.CSS_BLUEBAR_BACK {
+  font-family: Verdana;
+  padding-left: 12px;
+  padding-right: 16px;
+}
+
+.CSS_BLUE_BAR .CSS_DIVIDER {
+  border: solid 1px #437ec6;
+  border-color: #437ec6 #1f405b #1f405b #437ec6;
+}

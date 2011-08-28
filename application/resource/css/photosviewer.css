@@ -1,0 +1,86 @@
+.CSS_FULL_VIEW_LAYOUT.chrome-photopage,
+.chrome-photopage .CSS_FULL_VIEW_LAYOUT {
+  background: #000;
+  border-bottom: solid 60px #000;
+}
+
+.CSS_PHOTOS_VIEWER_TOP_BAR {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.CSS_PHOTOS_VIEWER_EMPTY,
+.CSS_PHOTOS_VIEWER_ERROR,
+.CSS_PHOTOS_VIEWER_ERROR_REASON {
+  todo: 1;
+}
+
+.CSS_PHOTOS_VIEWER_TOP_BAR  .CSS_DIVIDER {
+  border-color: #444 #444 #999 #999;
+}
+
+.CSS_PHOTOS_VIEWER {
+  background: #fff000;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.CSS_PHOTOS_VIEWER_CONTENT {
+  background: #000;
+  height: 100%;
+}
+
+.CSS_PHOTOS_VIEWER_CONTENT .CSS_SCROLL_LAYOUT {
+  background: transparent;
+}
+
+.CSS_PHOTOS_VIEWER_CANVAS {
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+.CSS_PHOTOS_VIEWER_PHOTO {
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.CSS_PHOTOS_VIEWER_IMG {
+  height: 100%;
+  width: 100%;
+}
+
+.CSS_PHOTOS_VIEWER_BOTTOM_BAR {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: -1px;
+  display: none;
+  padding: 2px 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.CSS_PHOTOS_VIEWER_NAV {
+  display: inline-block;
+  font: bold 24px/100% Verdana;
+  font-weight: bold;
+  line-height: 100%;
+  padding: 8px 10px 10px 10px;
+  margin: 0 8px;
+}
+
+.CSS_PHOTOS_VIEWER_NAV:focus {
+  outline: solid 1px #aaa;
+}

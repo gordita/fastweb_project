@@ -1,0 +1,21 @@
+.CSS_DOTS {
+  height: 6px;
+  text-align: center;
+  line-height: 0;
+  margin: 6px 0;
+  white-space: nowrap;
+}
+
+.CSS_DOTS_DOT {
+  border: solid 3px #ccc;
+  border-radius: 12px;
+  display: inline-block;
+  height: 0;
+  margin: 0 2px;
+  overflow: hidden;
+  width: 0;
+}
+
+.CSS_DOTS_DOT_SELECTED {
+  border-color: #999;
+}

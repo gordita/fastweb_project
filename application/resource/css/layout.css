@@ -1,0 +1,73 @@
+.CSS_FULL_VIEW_LAYOUT {
+  border-bottom: solid 60px #3E609D;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.CSS_STACK_ROWS_LAYOUT {
+  background: #fff;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.CSS_STACK_ROWS_LAYOUT_CELL {
+  display: table-cell;
+}
+
+.CSS_STACK_ROWS_LAYOUT_CONTENT {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.CSS_STACK_ROWS_LAYOUT_HEAD .CSS_STACK_ROWS_LAYOUT_CONTENT {
+  z-index: 10;
+}
+
+.CSS_STACK_ROWS_LAYOUT_HEAD,
+.CSS_STACK_ROWS_LAYOUT_FOOT {
+  display: table-row;
+  height: 1px;
+  z-index: 2;
+}
+
+.CSS_STACK_ROWS_LAYOUT_BODY {
+  display: table-row;
+}
+
+.CSS_SCROLL_LAYOUT {
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.CSS_SCROLL_LAYOUT_BODY {
+  x-webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  min-width: 100%;
+  position: absolute;
+}
+
+.CSS_CENTER_LAYOUT {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.CSS_CENTER_LAYOUT_WRAP_ONE {
+  display: table-row;
+}
+
+.CSS_CENTER_LAYOUT_WRAP_TWO {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}

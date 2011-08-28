@@ -1,0 +1,26 @@
+.CSS_TABS {
+  -webkit-box-orient: horizontal;
+  -webkit-user-select: none;
+  border-top: solid 1px #1f405b;
+  color: #fff;
+  display: block;
+  display: -webkit-box;
+  min-height: 1em;
+  white-space: nowrap;
+}
+
+.CSS_TAB {
+  -webkit-box-flex: 1;
+  padding: 8px 2px;
+  display: block;
+  outline: none;
+  text-align: center;
+}
+
+.CSS_TAB:first-child {
+  border-left: none;
+}
+
+.CSS_TAB:last-child {
+  border-right: none;
+}

@@ -1,0 +1,1 @@
+function dg(){M.call(this);Td(window).w.get("id");var a=new W,b=new R;a.N.e(b);b=new M;X(a,b);this.Gd=b;this.e(a)}u(dg,Q);dg.prototype.Gd=j;dg.prototype.i=function(){this.Gd.f().innerHTML='<div style="padding: 6px;">Coming soon :-P <br />'+window.location.pathname+"</div>"};I.tbdpage=dg;
