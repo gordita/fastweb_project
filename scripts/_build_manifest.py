@@ -15,11 +15,17 @@ CACHE MANIFEST
 
 # Explicitly cached 'master entries'.
 CACHE:
+http://connect.facebook.net/en_US/all.js
+https://connect.facebook.net/en_US/all.js
 %s
 
 # Resources that require the user to be online.
 NETWORK:
 *
+
+FALLBACK:
+/ /offline
+
 \"\"\"
 """
 
@@ -55,7 +61,7 @@ def build_manifest() :
                          timestamp,
                          file_paths)
 
-  outpath = '%s/manifest.py' % buildconfig.APPLICATION_PATH
+  outpath = '%s/app/web/manifest.py' % buildconfig.APPLICATION_PATH
   write_text(outpath, text)
 
 

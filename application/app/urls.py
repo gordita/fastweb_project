@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
     (r'^cache\.manifest$', 'app.web.views.manifest'),
     (r'^favicon\.ico$', 'app.web.views.favicon'),
+    (r'^offline', 'app.web.views.offline'),
     (r'^deps\.js', 'app.web.views.depsjs'),
     (r'^support$', 'app.web.views.support'),
     (r'^profile\.php', 'app.web.views.profile'),

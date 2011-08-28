@@ -50,6 +50,7 @@
 --js application/resource/closure-lib/closure/goog/net/cookies.js
 --js application/resource/closure-lib/closure/goog/json/json.js
 --js application/resource/hw/mock/albumsfeed.js
+--js application/resource/hw/mock/checkinfeed.js
 --js application/resource/hw/mock/infofeed.js
 --js application/resource/hw/mock/friendsfeed.js
 --js application/resource/hw/mock/groupsfeed.js
@@ -85,7 +86,7 @@
 --js application/resource/hw/ui/chrome.tpl.js
 --js application/resource/hw/ui/chrome.js
 --js application/resource/js/startup.js
---module startup:87
+--module startup:88
 --js application/resource/hw/module/basepage.js
 --module basepage:1:startup
 --js application/resource/hw/events/touchevent.js
@@ -151,5 +152,9 @@
 --js application/resource/hw/ui/feed/groups.js
 --js application/resource/hw/module/groupspage.js
 --module groupspage:3:photopage
+--js application/resource/hw/ui/feed/places.tpl.js
+--js application/resource/hw/ui/feed/places.js
+--js application/resource/hw/module/placespage.js
+--module placespage:3:groupspage
 --js application/resource/hw/module/tbdpage.js
---module tbdpage:1:groupspage
+--module tbdpage:1:placespage

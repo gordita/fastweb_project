@@ -16,6 +16,7 @@ hw.Module.Names.ProfilePage = 'profilepage';
 hw.Module.Names.PhotosPage = 'photospage';
 hw.Module.Names.PhotoPage = 'photopage';
 hw.Module.Names.GroupsPage = 'groupspage';
+hw.Module.Names.PlacesPage = 'placespage';
 hw.Module.Names.TbdPage = 'tbdpage';
 
 
@@ -30,7 +31,8 @@ hw.Module.Deps[hw.Module.Names.ProfilePage] = [hw.Module.Names.AlbumsPage];
 hw.Module.Deps[hw.Module.Names.PhotosPage] = [hw.Module.Names.ProfilePage];
 hw.Module.Deps[hw.Module.Names.PhotoPage] = [hw.Module.Names.PhotosPage];
 hw.Module.Deps[hw.Module.Names.GroupsPage] = [hw.Module.Names.PhotoPage];
-hw.Module.Deps[hw.Module.Names.TbdPage] = [hw.Module.Names.GroupsPage];
+hw.Module.Deps[hw.Module.Names.PlacesPage] = [hw.Module.Names.GroupsPage];
+hw.Module.Deps[hw.Module.Names.TbdPage] = [hw.Module.Names.PlacesPage];
 
 
 /** @type {Object} */
@@ -44,4 +46,5 @@ hw.Module.Url[hw.Module.Names.ProfilePage] = 'build/bin.profilepage.js';
 hw.Module.Url[hw.Module.Names.PhotosPage] = 'build/bin.photospage.js';
 hw.Module.Url[hw.Module.Names.PhotoPage] = 'build/bin.photopage.js';
 hw.Module.Url[hw.Module.Names.GroupsPage] = 'build/bin.groupspage.js';
+hw.Module.Url[hw.Module.Names.PlacesPage] = 'build/bin.placespage.js';
 hw.Module.Url[hw.Module.Names.TbdPage] = 'build/bin.tbdpage.js';

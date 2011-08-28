@@ -9,6 +9,7 @@ goog.require('goog.json');
 goog.require('hw.Logger');
 goog.require('hw.config');
 goog.require('hw.mock.AlbumsFeed');
+goog.require('hw.mock.CheckInsFeed');
 goog.require('hw.mock.InfoFeed');
 goog.require('hw.mock.FriendsFeed');
 goog.require('hw.mock.GroupsFeed');
@@ -37,13 +38,6 @@ hw.async.Fb.PERMISSIONS_VERSION_NAME = 'permv';
  * @private
  */
 hw.async.Fb.fbApi_ = null;
-
-
-///**
-// * @type {Object}
-// * @private
-// */
-//hw.async.Fb.loginStatus_ = null;
 
 
 /**
@@ -147,9 +141,6 @@ hw.async.Fb.permissions_ = [
   'user_website',
   'user_work_history',
   'video_upload'
-//  'read_friendlists',
-//  'manage_friendlists',
-//  'manage_pages',
 ];
 
 
@@ -194,6 +185,29 @@ hw.async.Fb.getPhotoFeed = function(id) {
       deferred.callback(results);
     } else {
       hw.Logger.log('hw.async.Fb.getPhotoFeed:error', results);
+      deferred.errback(results);
+    }
+  });
+  return deferred;
+};
+
+/**
+ * @param {string} id
+ * @return {goog.async.Deferred}
+ */
+hw.async.Fb.getPlacesFeed = function(id) {
+  hw.Logger.log('hw.async.Fb.getPlacesFeed', id);
+  if (hw.config.USE_MOCK_DATA) {
+    return hw.async.Fb.getMockData_(hw.mock.CheckInsFeed);
+  }
+  var deferred = new goog.async.Deferred();
+  var path = '/' + id + '/checkins';
+  hw.async.Fb.query_(path).addCallback(function(results) {
+    if (results['data'] && goog.isArray(results['data'])) {
+      hw.Logger.log('hw.async.Fb.getPlacesFeed:pass', results);
+      deferred.callback(results);
+    } else {
+      hw.Logger.log('hw.async.Fb.getPlacesFeed:error', results);
       deferred.errback(results);
     }
   });

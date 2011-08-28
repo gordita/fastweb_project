@@ -23,11 +23,6 @@ hw.ui.feed.Groups.prototype.friends_ = null;
 
 
 /** @inheritDoc */
-hw.ui.feed.Groups.prototype.disposeInternal = function() {
-  goog.base(this, 'disposeInternal');
-};
-
-/** @inheritDoc */
 hw.ui.feed.Groups.prototype.createFeedTemplate = function(payload) {
   var data = payload.data['data'];
   if (!goog.isArray(data) || !data.length) {

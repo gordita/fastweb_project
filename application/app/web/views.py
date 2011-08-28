@@ -19,6 +19,8 @@ from manifest import MANIFEST_VERSION
 # for redirect
 # return HttpResponseRedirect("/signup")
 
+def offline(request):
+  return index(request)
 
 def index(request) :
   """

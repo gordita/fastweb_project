@@ -34,6 +34,7 @@ MODULE_NAMES = [
   'PhotosPage',
   'PhotoPage',
   'GroupsPage',
+  'PlacesPage',
   'TbdPage', # Kep this one last.
 ]
 

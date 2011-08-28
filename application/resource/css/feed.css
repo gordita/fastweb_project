@@ -277,7 +277,8 @@
 }
 
 .CSS_FRIENDS_FEED_ITEM,
-.CSS_GROUPS_FEED_ITEM {
+.CSS_GROUPS_FEED_ITEM,
+.CSS_PLACES_FEED_ITEM {
   border-bottom: solid 1px #eee;
   display: block;
   height: 50px;
@@ -290,7 +291,8 @@
 }
 
 .CSS_FRIENDS_FEED_ITEM_PICTURE,
-.CSS_GROUPS_FEED_ITEM_IMG {
+.CSS_GROUPS_FEED_ITEM_IMG,
+.CSS_PLACES_FEED_ITEM_IMG {
   display: inline-block;
   height: 50px;
   margin-right: 6px;
@@ -299,7 +301,8 @@
 }
 
 .CSS_FRIENDS_FEED_ITEM_NAME,
-.CSS_GROUPS_FEED_ITEM_NAME {
+.CSS_GROUPS_FEED_ITEM_NAME,
+.CSS_PLACES_FEED_ITEM_NAME {
   color: #000;
   font-weight: bold;
   vertical-align: middle;
@@ -350,3 +353,20 @@
 .CSS_PHOTOS_FEED_IMG_H {
   width: 60px;
 }
+
+.CSS_PLACES_FEED_ITEM_CONTEXT {
+  display: inline-block;
+  line-height: 115%;
+  vertical-align: top;
+}
+
+.CSS_PLACES_FEED_ITEM_PLACE {
+  color: #3B5998;
+  font-size: 80%;
+}
+
+.CSS_PLACES_FEED_ITEM_TIME {
+  color: #808080;
+  font-size: 80%;
+}
+

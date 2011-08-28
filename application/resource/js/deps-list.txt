@@ -50,6 +50,7 @@ application/resource/closure-lib/closure/goog/dom/dom.js
 application/resource/closure-lib/closure/goog/net/cookies.js
 application/resource/closure-lib/closure/goog/json/json.js
 application/resource/hw/mock/albumsfeed.js
+application/resource/hw/mock/checkinfeed.js
 application/resource/hw/mock/infofeed.js
 application/resource/hw/mock/friendsfeed.js
 application/resource/hw/mock/groupsfeed.js
@@ -141,4 +142,7 @@ application/resource/hw/module/photopage.js
 application/resource/hw/ui/feed/groups.tpl.js
 application/resource/hw/ui/feed/groups.js
 application/resource/hw/module/groupspage.js
+application/resource/hw/ui/feed/places.tpl.js
+application/resource/hw/ui/feed/places.js
+application/resource/hw/module/placespage.js
 application/resource/hw/module/tbdpage.js

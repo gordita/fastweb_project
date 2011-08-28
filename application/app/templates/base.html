@@ -1,8 +1,9 @@
 <!doctype html>
 <html class="startup-background"
 {% if COMPILED %}
-manifest="/cache.manifest?v={{MANIFEST_VERSION}}"
-{% endif %}>
+manifest="/cache.manifest"
+{% endif %}
+manifest_version={{MANIFEST_VERSION}}>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>

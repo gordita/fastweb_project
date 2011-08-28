@@ -1,5 +1,5 @@
-/*!
- * iScroll v4.1.8 ~ Copyright (c) 2011 Matteo Spinelli, http://cubiq.org
+/**
+ * @license PiScroll v4.1.8 ~ Copyright (c) 2011 Matteo Spinelli, http://cubiq.org
  * Released under MIT license, http://cubiq.org/license
  */
 goog.provide('hw.others.IScroll');
@@ -869,8 +869,8 @@ hw.others.IScroll.prototype.end_ = function (e) {
   var that = this,
     point = hw.ui.scroll.Env.hasTouch ? e.changedTouches[0] : e,
     target, ev,
-    momentumX = { dist:0, time:0 },
-    momentumY = { dist:0, time:0 },
+    momentumX = {dist:0, time:0},
+    momentumY = {dist:0, time:0},
     duration = (e.timeStamp || (new Date()).getTime()) - that.startTime_,
     newPosX = that.x_,
     newPosY = that.y_,
@@ -985,12 +985,12 @@ hw.others.IScroll.prototype.end_ = function (e) {
 
     if ((that.x_ > 0 && newPosX > 0) ||
       (that.x_ < that.maxScrollX_ && newPosX < that.maxScrollX_)) {
-      momentumX = { dist:0, time:0 };
+      momentumX = {dist:0, time:0};
     }
 
     if ((that.y_ > that.minScrollY_ && newPosY > that.minScrollY_) ||
       (that.y_ < that.maxScrollY_ && newPosY < that.maxScrollY_)) {
-      momentumY = { dist:0, time:0 };
+      momentumY = {dist:0, time:0};
     }
   }
 
@@ -1296,7 +1296,7 @@ hw.others.IScroll.prototype.momentum_ = function (dist, time, maxDistUpper,
   newDist = newDist * (dist < 0 ? -1 : 1);
   newTime = speed / deceleration;
 
-  return { dist: newDist, time: Math.round(newTime) };
+  return {dist: newDist, time: Math.round(newTime)};
 };
 
 
@@ -1318,7 +1318,7 @@ hw.others.IScroll.prototype.offset_ = function (el) {
     top *= this.scale_;
   }
 
-  return { left: left, top: top };
+  return {left: left, top: top};
 };
 
 
@@ -1553,9 +1553,16 @@ hw.others.IScroll.prototype.scrollTo = function (x, y, time, relative) {
 
   that.stop();
 
-  if (!step.length) step = [
-    { x: x, y: y, time: time, relative: relative }
-  ];
+  if (!step.length) {
+    step = [
+      {
+        x: x,
+        y: y,
+        time: time,
+        relative: relative
+      }
+    ];
+  }
 
   for (i = 0,l = step.length; i < l; i++) {
     if (step[i].relative) {

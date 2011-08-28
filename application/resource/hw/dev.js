@@ -11,4 +11,5 @@ goog.require('hw.module.ProfilePage');
 goog.require('hw.module.PhotosPage');
 goog.require('hw.module.PhotoPage');
 goog.require('hw.module.GroupsPage');
+goog.require('hw.module.PlacesPage');
 goog.require('hw.module.TbdPage');

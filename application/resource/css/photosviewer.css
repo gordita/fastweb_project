@@ -17,7 +17,10 @@
 .CSS_PHOTOS_VIEWER_EMPTY,
 .CSS_PHOTOS_VIEWER_ERROR,
 .CSS_PHOTOS_VIEWER_ERROR_REASON {
-  todo: 1;
+  color: #fff;
+  display: block;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .CSS_PHOTOS_VIEWER_TOP_BAR  .CSS_DIVIDER {

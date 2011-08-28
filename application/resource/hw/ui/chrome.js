@@ -141,14 +141,14 @@ hw.ui.Chrome.prototype.start_ = function() {
     hw.Module.Names.ProfilePage, /^\/profile/g,
     hw.Module.Names.HomePage,  /^\/home/g,
     hw.Module.Names.ProfilePage, /^\/profile/g,
-    hw.Module.Names.HomePage, /^\/home/g,
     hw.Module.Names.AlbumsPage, /^\/albums/g,
     hw.Module.Names.PhotosPage, /^\/album/g,
     hw.Module.Names.PhotoPage, /^\/photo/g,
     hw.Module.Names.FriendsPage, /^\/friends/g,
     hw.Module.Names.GroupsPage, /^\/groups/g,
+    hw.Module.Names.PlacesPage, /^\/places/g,
+
     // TBDs.
-    hw.Module.Names.TbdPage, /^\/places/g,
     hw.Module.Names.TbdPage, /^\/events/g,
     hw.Module.Names.TbdPage, /^\/chat/g,
     hw.Module.Names.TbdPage, /^\/messages/g,

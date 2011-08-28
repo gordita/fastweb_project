@@ -1,1 +1,1 @@
-function dg(){M.call(this);Td(window).w.get("id");var a=new W,b=new R;a.N.e(b);b=new M;X(a,b);this.Gd=b;this.e(a)}u(dg,Q);dg.prototype.Gd=j;dg.prototype.i=function(){this.Gd.f().innerHTML='<div style="padding: 6px;">Coming soon :-P <br />'+window.location.pathname+"</div>"};I.tbdpage=dg;
+function hg(){L.call(this);P(window).u.get("id");var a=new W,b=new R;X(a,b);b=new L;Y(a,b);this.Gd=b;this.g(a)}t(hg,Q);hg.prototype.Gd=j;hg.prototype.h=function(){this.Gd.e().innerHTML='<div style="padding: 6px;">Coming soon :-P <br />'+window.location.pathname+"</div>"};H.tbdpage=hg;

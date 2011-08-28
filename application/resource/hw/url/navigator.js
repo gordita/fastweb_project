@@ -52,11 +52,10 @@ hw.url.Navigator.go = function(url, opt_window, opt_use_popup) {
     hw.events.AppEventTarget.updateLayout(hw.url.Navigator);
     return;
   }
-
-  if (opt_use_popup) {
+  if (opt_use_popup && !hw.config.IS_TOUCH_DEVICES) {
     win.open(targetUri.toString());
   } else {
-    win.href = targetUri.toString();
+    win.location.href = targetUri.toString();
   }
 };
 

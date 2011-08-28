@@ -32,7 +32,7 @@ hw.dom.ViewportSizeMonitor = function(opt_win) {
 
   this.handler_.listen(
     this.window_.document,
-    goog.events.EventType.TOUCHEND,
+    goog.events.EventType.CLICK,
     this.onTouchEnd_);
 
 
@@ -116,7 +116,7 @@ hw.dom.ViewportSizeMonitor.prototype.getSize = function() {
 
 /**
  * @param {Event=} evt
- * @private 
+ * @private
  */
 hw.dom.ViewportSizeMonitor.prototype.onResize_ = function(evt) {
   if (evt && evt.type == hw.events.EventType.ORIENTATION_CHANGE) {
