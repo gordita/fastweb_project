@@ -76,7 +76,7 @@ hw.config.ENABLE_HISTORY_PUSHSTATE =
 hw.config.ALLOW_PINCH_AND_ZOOM = hw.config.IS_IOS;
 
 /** @type {boolean} */
-hw.config.ENABLE_HIDE_ADDRESSBAR = hw.config.IS_TOUCH_DEVICES &&
+hw.config.ENABLE_HIDE_ADDRESSBAR = hw.config.IS_IOS &&
   !(window.navigator['standalone']);
 
 /** @type {boolean} */
