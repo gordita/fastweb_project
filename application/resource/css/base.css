@@ -75,6 +75,12 @@ input {
   display: none;
 }
 
+.CSS_TBD_PAGE_CONTENT {
+  line-height: 200%;
+  padding:  12px;
+  text-align: center;
+}
+
 .CSS_TABLE {
   display: table;
 }

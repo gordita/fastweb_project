@@ -1,5 +1,6 @@
 /**
- * @license PiScroll v4.1.8 ~ Copyright (c) 2011 Matteo Spinelli, http://cubiq.org
+ * @license iScroll v4.1.8 ~ Copyright (c) 2011 Matteo Spinelli,
+ * http://cubiq.org
  * Released under MIT license, http://cubiq.org/license
  */
 goog.provide('hw.others.IScroll');
@@ -642,13 +643,13 @@ hw.others.IScroll.prototype._scrollbarPos = function (dir, hidden) {
         size = 8;
       }
       elScrollbarIndicator.style[dir == 'h' ? 'width' : 'height'] = size + 'px';
-      pos = nScrollbarMaxScroll + (nScrollbarIndicatorSize - size);
+      pos = nScrollbarMaxScroll + nScrollbarIndicatorSize - size;
     } else {
       pos = nScrollbarMaxScroll;
     }
   }
 
-  elScrollbarWrapper.style[hw.ui.scroll.Env.vendor + 'TransitionDelay'] = '0';
+  elScrollbarWrapper.style[hw.ui.scroll.Env.transitionDelay] = '0';
 
   elScrollbarWrapper.style.opacity =
     hidden && that.options_.hideScrollbar ? '0' : '1';
@@ -715,7 +716,9 @@ hw.others.IScroll.prototype.start_ = function (e) {
     if (that.options_.useTransform) {
       // Very lame general purpose alternative to CSSMatrix
       var transform = win.getComputedStyle(that.scroller_, null);
-      matrix = transform[hw.ui.scroll.Env.transform].replace(/[^0-9-.,]/g, '').split(',');
+      matrix = transform[hw.ui.scroll.Env.transform].
+        replace(/[^0-9-.,]/g, '').
+        split(',');
       x = matrix[4] * 1;
       y = matrix[5] * 1;
     } else {
@@ -882,7 +885,9 @@ hw.others.IScroll.prototype.end_ = function (e) {
   that.unbind_(hw.ui.scroll.Env.END_EV);
   that.unbind_(hw.ui.scroll.Env.CANCEL_EV);
 
-  if (that.options_.onBeforeScrollEnd) that.options_.onBeforeScrollEnd.call(that, e);
+  if (that.options_.onBeforeScrollEnd) {
+    that.options_.onBeforeScrollEnd.call(that, e);
+  }
 
   if (that.zoomed_) {
     scale = that.scale_ * that.lastScale;
@@ -897,7 +902,8 @@ hw.others.IScroll.prototype.end_ = function (e) {
     oScrollerStyle[hw.ui.scroll.Env.transitionDuration] = '200ms';
     oScrollerStyle[hw.ui.scroll.Env.transform] =
       hw.ui.scroll.Env.trnOpen + that.x_ + 'px,' +
-        that.y_ + 'px' + hw.ui.scroll.Env.trnClose + ' scale(' + that.scale_ + ')';
+        that.y_ + 'px' + hw.ui.scroll.Env.trnClose +
+        ' scale(' + that.scale_ + ')';
 
     that.zoomed_ = false;
     that.refresh();
@@ -1229,7 +1235,8 @@ hw.others.IScroll.prototype.startAni_ = function () {
     if (now >= startTime + step.time) {
       that.pos_(step.x, step.y);
       that.animating_ = false;
-      if (that.options_.onAnimationEnd) that.options_.onAnimationEnd.call(that);			// Execute custom code on animation end
+      if (that.options_.onAnimationEnd) that.options_.onAnimationEnd.call(that);
+      // Execute custom code on animation end
       that.startAni_();
       return;
     }

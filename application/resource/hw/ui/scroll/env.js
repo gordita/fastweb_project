@@ -61,8 +61,8 @@ hw.ui.scroll.Env.transform = hw.ui.scroll.Env.vendor +
  * @const
  * @type {boolean}
  */
-hw.ui.scroll.Env.has3d = 'WebKitCSSMatrix' in window &&
-  ('m11' in new window['WebKitCSSMatrix']());
+hw.ui.scroll.Env.has3d = 'styleMedia' in window &&
+  window['styleMedia']['matchMedium']('(-webkit-transform-3d)');
 
 /**
  * @const

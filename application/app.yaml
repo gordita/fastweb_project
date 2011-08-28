@@ -8,6 +8,10 @@ handlers:
   secure: always
   static_dir: static
 
+- url: /images
+  secure: always
+  static_dir: images
+
 - url: /build
   secure: always
   static_dir: build
