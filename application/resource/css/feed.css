@@ -36,6 +36,7 @@
 }
 
 .CSS_FEED_LIST_ITEM {
+  background: #fff;
   border-top: solid 1px #eeeeff;
   padding: 4px 40px 4px 4px;
   min-height: 2em;
@@ -290,14 +291,20 @@
   margin-bottom: -1px;
 }
 
-.CSS_FRIENDS_FEED_ITEM_PICTURE,
+.CSS_FEED_ITEM_USER_IMG,
 .CSS_GROUPS_FEED_ITEM_IMG,
 .CSS_PLACES_FEED_ITEM_IMG {
+  background: #c4cde0 url(images/anony.gif) 50% 50% no-repeat;
+  background-size: 100% 100%;
   display: inline-block;
   height: 50px;
   margin-right: 6px;
   vertical-align: middle;
   width: 50px;
+}
+
+.CSS_PLACES_FEED_ITEM_IMG {
+  background-image: url(images/place.png)
 }
 
 .CSS_FRIENDS_FEED_ITEM_NAME,
@@ -366,7 +373,24 @@
 }
 
 .CSS_PLACES_FEED_ITEM_TIME {
-  color: #808080;
+  color: #000;
   font-size: 80%;
 }
 
+.CSS_NOTIFICATION_FEED_LINK {
+  display: block;
+}
+
+.CSS_NOTIFICATION_FEED_NAME {
+  color: #000;
+  display: block;
+}
+
+.CSS_NOTIFICATION_FEED_TIME {
+  color: #808080;
+  font-size: 80%
+}
+
+.CSS_NOTIFICATION_FEED_LIST_ITEM {
+  padding: 0;
+}

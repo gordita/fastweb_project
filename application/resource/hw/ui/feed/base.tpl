@@ -84,7 +84,6 @@
   {foreach $item in $items}
   {call .listitem_}
   {param item: $item /}
-  {param defer: (index($item) > 3) /}
   {/call}
   {/foreach}
 </ul>
@@ -94,11 +93,9 @@
 /**
  * template.
  * @param item
- * @param defer
  */
 {template .listitem_ private="true"}
-<li class="{css CSS_FEED_LIST_ITEM}{sp}
-           {if $defer}{css CSS_DEFER_ELEMENT}{/if}">
+<li class="{css CSS_FEED_LIST_ITEM}">
 
   <div class="{css CSS_FEED_LIST_ITEM_GRID}">
     <div class="{css CSS_FEED_LIST_ITEM_ROW}">

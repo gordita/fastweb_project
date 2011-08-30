@@ -55,6 +55,7 @@
 --js application/resource/hw/mock/friendsfeed.js
 --js application/resource/hw/mock/groupsfeed.js
 --js application/resource/hw/mock/newsfeed.js
+--js application/resource/hw/mock/notificationsfeed.js
 --js application/resource/hw/mock/photofeed.js
 --js application/resource/hw/mock/photosfeed.js
 --js application/resource/hw/mock/profilefeed.js
@@ -86,7 +87,7 @@
 --js application/resource/hw/ui/chrome.tpl.js
 --js application/resource/hw/ui/chrome.js
 --js application/resource/js/startup.js
---module startup:88
+--module startup:89
 --js application/resource/hw/module/basepage.js
 --module basepage:1:startup
 --js application/resource/hw/events/touchevent.js
@@ -113,10 +114,12 @@
 --js application/resource/hw/ui/searchbox.js
 --js application/resource/hw/ui/feed/base.tpl.js
 --js application/resource/hw/ui/feed/base.js
+--js application/resource/hw/ui/feed/notifications.tpl.js
+--js application/resource/hw/ui/feed/nofitications.js
 --js application/resource/hw/ui/flypanel.tpl.js
 --js application/resource/hw/ui/flypanel.js
 --js application/resource/hw/module/dockpage.js
---module dockpage:27:basepage
+--module dockpage:29:basepage
 --js application/resource/hw/ui/sharebox.tpl.js
 --js application/resource/hw/ui/sharebox.js
 --js application/resource/hw/ui/feed/news.js

@@ -35,7 +35,7 @@ hw.config.BUILD_TIME = 100;
 hw.config.USE_MOCK_FB_API = false;
 
 /** @define {boolean} */
-hw.config.USE_MOCK_DATA = !true;
+hw.config.USE_MOCK_DATA = true;
 
 ////////////////////////////////////////////////////////////////////////////////
 /** @type {string} */

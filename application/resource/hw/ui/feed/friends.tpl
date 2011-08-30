@@ -41,7 +41,7 @@
  */
 {template .item_ private="true"}
 <a href="/profile?id={$userId}"  class="{css CSS_FRIENDS_FEED_ITEM}">
-  <img src="{$picture}" class="{css CSS_FRIENDS_FEED_ITEM_PICTURE}" />
+  <img src="{$picture}" class="{css CSS_FEED_ITEM_USER_IMG}" />
   <span href="/profile?id={$userId}" class="{css CSS_FRIENDS_FEED_ITEM_NAME}">
     {$name}
   </span>

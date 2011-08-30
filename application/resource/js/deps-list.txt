@@ -55,6 +55,7 @@ application/resource/hw/mock/infofeed.js
 application/resource/hw/mock/friendsfeed.js
 application/resource/hw/mock/groupsfeed.js
 application/resource/hw/mock/newsfeed.js
+application/resource/hw/mock/notificationsfeed.js
 application/resource/hw/mock/photofeed.js
 application/resource/hw/mock/photosfeed.js
 application/resource/hw/mock/profilefeed.js
@@ -111,6 +112,8 @@ application/resource/hw/ui/searchbox.tpl.js
 application/resource/hw/ui/searchbox.js
 application/resource/hw/ui/feed/base.tpl.js
 application/resource/hw/ui/feed/base.js
+application/resource/hw/ui/feed/notifications.tpl.js
+application/resource/hw/ui/feed/nofitications.js
 application/resource/hw/ui/flypanel.tpl.js
 application/resource/hw/ui/flypanel.js
 application/resource/hw/module/dockpage.js

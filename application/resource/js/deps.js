@@ -4,7 +4,7 @@ goog.addDependency("../../../hw/cssnames.js", ['tpl.CSS_NAMES'], []);
 goog.addDependency("../../../hw/dev.js", ['hw.DevOnly'], ['hw.config', 'hw.ui.Chrome', 'hw.module.BasePage', 'hw.module.DockPage', 'hw.module.HomePage', 'hw.module.FriendsPage', 'hw.module.AlbumsPage', 'hw.module.ProfilePage', 'hw.module.PhotosPage', 'hw.module.PhotoPage', 'hw.module.GroupsPage', 'hw.module.PlacesPage', 'hw.module.TbdPage']);
 goog.addDependency("../../../hw/logger.js", ['hw.Logger', 'hw.HtmlLogger'], ['goog.userAgent', 'hw.config', 'tpl.CSS_NAMES']);
 goog.addDependency("../../../hw/module.js", ['hw.Module', 'hw.Module.Name', 'hw.Module.Url', 'hw.Module.Deps'], []);
-goog.addDependency("../../../hw/async/fb.js", ['hw.async.Fb'], ['goog.Uri', 'goog.async.Deferred', 'goog.asserts', 'goog.dom', 'goog.net.Cookies', 'goog.json', 'hw.Logger', 'hw.config', 'hw.mock.AlbumsFeed', 'hw.mock.CheckInsFeed', 'hw.mock.InfoFeed', 'hw.mock.FriendsFeed', 'hw.mock.GroupsFeed', 'hw.mock.NewsFeed', 'hw.mock.PhotoFeed', 'hw.mock.PhotosFeed', 'hw.mock.ProfileFeed', 'hw.mock.User']);
+goog.addDependency("../../../hw/async/fb.js", ['hw.async.Fb'], ['goog.Uri', 'goog.async.Deferred', 'goog.asserts', 'goog.dom', 'goog.net.Cookies', 'goog.json', 'hw.Logger', 'hw.config', 'hw.mock.AlbumsFeed', 'hw.mock.CheckInsFeed', 'hw.mock.InfoFeed', 'hw.mock.FriendsFeed', 'hw.mock.GroupsFeed', 'hw.mock.NewsFeed', 'hw.mock.NotificationsFeed', 'hw.mock.PhotoFeed', 'hw.mock.PhotosFeed', 'hw.mock.ProfileFeed', 'hw.mock.User']);
 goog.addDependency("../../../hw/async/fb2.js", [], []);
 goog.addDependency("../../../hw/async/later.js", ['hw.async.Later'], ['goog.Disposable', 'goog.dispose']);
 goog.addDependency("../../../hw/async/lazyhtmlrenderer.js", ['hw.async.LazyHtmlRenderer'], ['goog.dispose', 'goog.events.EventTarget', 'goog.dom', 'goog.dom.classes', 'goog.dom.DomHelper', 'hw.async.Later', 'tpl.CSS_NAMES']);
@@ -26,6 +26,7 @@ goog.addDependency("../../../hw/mock/friendsfeed.js", ['hw.mock.FriendsFeed'], [
 goog.addDependency("../../../hw/mock/groupsfeed.js", ['hw.mock.GroupsFeed'], []);
 goog.addDependency("../../../hw/mock/infofeed.js", ['hw.mock.InfoFeed'], []);
 goog.addDependency("../../../hw/mock/newsfeed.js", ['hw.mock.NewsFeed'], []);
+goog.addDependency("../../../hw/mock/notificationsfeed.js", ['hw.mock.NotificationsFeed'], []);
 goog.addDependency("../../../hw/mock/photofeed.js", ['hw.mock.PhotoFeed'], []);
 goog.addDependency("../../../hw/mock/photosfeed.js", ['hw.mock.PhotosFeed'], []);
 goog.addDependency("../../../hw/mock/profilefeed.js", ['hw.mock.ProfileFeed'], []);
@@ -41,7 +42,7 @@ goog.addDependency("../../../hw/module/photopage.js", ['hw.module.PhotoPage'], [
 goog.addDependency("../../../hw/module/photospage.js", ['hw.module.PhotosPage'], ['hw.async.ModuleLoader', 'hw.module.BasePage', 'hw.ui.BaseComponent', 'hw.ui.BlueBar', 'hw.layout.StackRows', 'hw.ui.SearchBox', 'hw.ui.feed.Photos', 'hw.url.Dispatcher']);
 goog.addDependency("../../../hw/module/placespage.js", ['hw.module.PlacesPage'], ['hw.async.ModuleLoader', 'hw.module.BasePage', 'hw.ui.BaseComponent', 'hw.ui.BlueBar', 'hw.layout.StackRows', 'hw.url.Dispatcher', 'hw.ui.feed.Places']);
 goog.addDependency("../../../hw/module/profilepage.js", ['hw.module.ProfilePage'], ['goog.Uri', 'hw.events.EventType', 'hw.async.ModuleLoader', 'hw.layout.StackRows', 'hw.msg', 'hw.ui.BaseComponent', 'hw.ui.BlueBar', 'hw.ui.feed.Albums', 'hw.ui.feed.Info', 'hw.ui.ProfileCard', 'hw.ui.ShareBox', 'hw.ui.Tabs', 'hw.ui.TabsView', 'hw.ui.feed.Profile', 'hw.url.Dispatcher']);
-goog.addDependency("../../../hw/module/tbdpage.js", ['hw.module.TbdPage'], ['hw.async.ModuleLoader', 'hw.module.BasePage', 'hw.ui.BaseComponent', 'hw.ui.BlueBar', 'hw.layout.StackRows', 'hw.ui.feed.Albums', 'hw.url.Dispatcher']);
+goog.addDependency("../../../hw/module/tbdpage.js", ['hw.module.TbdPage'], ['hw.async.ModuleLoader', 'hw.module.BasePage', 'hw.ui.BaseComponent', 'hw.ui.BlueBar', 'hw.layout.StackRows', 'hw.ui.feed.Albums', 'hw.url.Dispatcher', 'tpl.CSS_NAMES']);
 goog.addDependency("../../../hw/msg/msg.tpl.js", ['hw.msg'], ['soy', 'soy.StringBuilder']);
 goog.addDependency("../../../hw/others/iscroll.js", ['hw.others.IScroll'], ['goog.dom', 'hw.ui.scroll.Env', 'hw.ui.scroll.Options']);
 goog.addDependency("../../../hw/ui/basecomponent.js", ['hw.ui.BaseComponent'], ['goog.array', 'goog.asserts', 'goog.dom', 'goog.dom.classes', 'goog.dom.DomHelper', 'goog.events.EventTarget', 'goog.events.EventHandler', 'goog.math.Size', 'goog.style', 'hw.Logger', 'hw.async.Later', 'hw.msg', 'tpl.CSS_NAMES']);
@@ -54,7 +55,7 @@ goog.addDependency("../../../hw/ui/dockicons.js", ['hw.ui.DockIcons'], ['goog.do
 goog.addDependency("../../../hw/ui/dockicons.tpl.js", ['tpl.ui.DockIcons'], ['soy', 'soy.StringBuilder']);
 goog.addDependency("../../../hw/ui/dots.js", ['hw.ui.Dots'], ['goog.array', 'hw.ui.BaseComponent', 'tpl.CSS_NAMES', 'tpl.ui.Dots']);
 goog.addDependency("../../../hw/ui/dots.tpl.js", ['tpl.ui.Dots'], ['soy', 'soy.StringBuilder']);
-goog.addDependency("../../../hw/ui/flypanel.js", ['hw.ui.FlyPanel'], ['goog.array', 'goog.async.Deferred', 'goog.events.EventHandler', 'goog.style', 'hw.dom.ViewportSizeMonitor', 'hw.ui.BaseComponent', 'hw.events.EventType', 'hw.events.TouchEvent', 'hw.layout.Scroll', 'hw.ui.scroll.Env', 'hw.ui.feed.Base', 'tpl.CSS_NAMES', 'tpl.ui.FlyPanel']);
+goog.addDependency("../../../hw/ui/flypanel.js", ['hw.ui.FlyPanel'], ['goog.array', 'goog.async.Deferred', 'goog.events.EventHandler', 'goog.style', 'hw.dom.ViewportSizeMonitor', 'hw.ui.BaseComponent', 'hw.events.EventType', 'hw.events.TouchEvent', 'hw.layout.Scroll', 'hw.ui.scroll.Env', 'hw.ui.feed.Notifications', 'tpl.CSS_NAMES', 'tpl.ui.FlyPanel']);
 goog.addDependency("../../../hw/ui/flypanel.tpl.js", ['tpl.ui.FlyPanel'], ['soy', 'soy.StringBuilder']);
 goog.addDependency("../../../hw/ui/photosviewer.js", ['hw.ui.PhotosViewer'], ['goog.asserts', 'goog.array', 'goog.style', 'goog.math.Rect', 'goog.math.Size', 'hw.async.Fb', 'hw.config', 'hw.dom.ViewportSizeMonitor', 'hw.events.Event', 'hw.events.EventType', 'hw.layout.Scroll', 'hw.ui.BaseComponent', 'hw.ui.scroll.Options', 'tpl.ui.PhotosViewer']);
 goog.addDependency("../../../hw/ui/photosviewer.tpl.js", ['tpl.ui.PhotosViewer'], ['soy', 'soy.StringBuilder']);
@@ -84,6 +85,8 @@ goog.addDependency("../../../hw/ui/feed/groups.tpl.js", ['tpl.ui.feed.Groups'], 
 goog.addDependency("../../../hw/ui/feed/info.js", ['hw.ui.feed.Info'], ['hw.ui.feed.Base', 'hw.async.Fb', 'tpl.ui.feed.Info']);
 goog.addDependency("../../../hw/ui/feed/info.tpl.js", ['tpl.ui.feed.Info'], ['soy', 'soy.StringBuilder']);
 goog.addDependency("../../../hw/ui/feed/news.js", ['hw.ui.feed.News'], ['hw.ui.feed.Base', 'hw.async.Fb']);
+goog.addDependency("../../../hw/ui/feed/nofitications.js", ['hw.ui.feed.Notifications'], ['hw.ui.feed.Base', 'hw.async.Fb', 'tpl.CSS_NAMES', 'tpl.ui.feed.Notifications']);
+goog.addDependency("../../../hw/ui/feed/notifications.tpl.js", ['tpl.ui.feed.Notifications'], ['soy', 'soy.StringBuilder', 'tpl.ui.feed.Notifications']);
 goog.addDependency("../../../hw/ui/feed/photos.js", ['hw.ui.feed.Photos'], ['hw.ui.feed.Base', 'hw.async.Fb', 'tpl.ui.feed.Photos']);
 goog.addDependency("../../../hw/ui/feed/photos.tpl.js", ['tpl.ui.feed.Photos'], ['soy', 'soy.StringBuilder']);
 goog.addDependency("../../../hw/ui/feed/places.js", ['hw.ui.feed.Places'], ['hw.ui.feed.Base', 'hw.async.Fb', 'tpl.ui.feed.Places']);

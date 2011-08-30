@@ -152,6 +152,7 @@ hw.ui.Chrome.prototype.start_ = function() {
     hw.Module.Names.TbdPage, /^\/events/g,
     hw.Module.Names.TbdPage, /^\/chat/g,
     hw.Module.Names.TbdPage, /^\/messages/g,
+    hw.Module.Names.TbdPage, /^\/message/g,
     hw.Module.Names.TbdPage, /^\/notes/g,
     hw.Module.Names.DockPage, /.*/g
   ];

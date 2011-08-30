@@ -10,21 +10,23 @@ goog.require('hw.events.EventType');
 goog.require('hw.events.TouchEvent');
 goog.require('hw.layout.Scroll');
 goog.require('hw.ui.scroll.Env');
-goog.require('hw.ui.feed.Base');
+goog.require('hw.ui.feed.Notifications');
 goog.require('tpl.CSS_NAMES');
 goog.require('tpl.ui.FlyPanel');
 
 
 /**
+ * TODO(hedger): Make this widget more generic (not just for notifications).
  * @constructor
- * @extends {hw.ui.feed.Base}
+ * @extends {hw.ui.feed.Notifications}
  */
 hw.ui.FlyPanel = function(caption) {
+  // TODO(hedger): Use dynamic UserId.
   goog.base(this, 'me');
   this.caption_ = caption;
   this.touchHandler_ = new goog.events.EventHandler(this);
 };
-goog.inherits(hw.ui.FlyPanel, hw.ui.feed.Base);
+goog.inherits(hw.ui.FlyPanel, hw.ui.feed.Notifications);
 
 
 /**
@@ -116,13 +118,14 @@ hw.ui.FlyPanel.prototype.captureElement = function() {
 /** @inheritDoc */
 hw.ui.FlyPanel.prototype.getFeed = function() {
   var deferred = new goog.async.Deferred();
-  hw.async.Fb.getNewsFeed().addCallback(function(results) {
-    if (this.isDisposed()) {
-      return;
-    }
-    this.createPanel_();
-    this.renderSuccessFeed_ = goog.bind(deferred.callback, deferred, results);
-  }, this);
+  hw.async.Fb.getNotificationsFeed(this.getUserId()).
+    addCallback(function(results) {
+      if (this.isDisposed()) {
+        return;
+      }
+      this.createPanel_();
+      this.renderSuccessFeed_ = goog.bind(deferred.callback, deferred, results);
+    }, this);
 
   return deferred;
 };

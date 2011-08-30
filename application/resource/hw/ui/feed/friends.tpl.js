@@ -56,6 +56,6 @@ tpl.ui.feed.Friends.content_ = function(opt_data, opt_sb) {
  */
 tpl.ui.feed.Friends.item_ = function(opt_data, opt_sb) {
   var output = opt_sb || new soy.StringBuilder();
-  output.append('<a href="/profile?id=', soy.$$escapeHtml(opt_data.userId), '"  class="', CSS_FRIENDS_FEED_ITEM, '"><img src="', soy.$$escapeHtml(opt_data.picture), '" class="', CSS_FRIENDS_FEED_ITEM_PICTURE, '" /><span href="/profile?id=', soy.$$escapeHtml(opt_data.userId), '" class="', CSS_FRIENDS_FEED_ITEM_NAME, '">', soy.$$escapeHtml(opt_data.name), '</span></a>');
+  output.append('<a href="/profile?id=', soy.$$escapeHtml(opt_data.userId), '"  class="', CSS_FRIENDS_FEED_ITEM, '"><img src="', soy.$$escapeHtml(opt_data.picture), '" class="', CSS_FEED_ITEM_USER_IMG, '" /><span href="/profile?id=', soy.$$escapeHtml(opt_data.userId), '" class="', CSS_FRIENDS_FEED_ITEM_NAME, '">', soy.$$escapeHtml(opt_data.name), '</span></a>');
   if (!opt_sb) return output.toString();
 };

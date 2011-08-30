@@ -89,7 +89,7 @@ tpl.ui.feed.Base.listItems_ = function(opt_data, opt_sb) {
   var itemListLen58 = itemList58.length;
   for (var itemIndex58 = 0; itemIndex58 < itemListLen58; itemIndex58++) {
     var itemData58 = itemList58[itemIndex58];
-    tpl.ui.feed.Base.listitem_({item: itemData58, defer: itemIndex58 > 3}, output);
+    tpl.ui.feed.Base.listitem_({item: itemData58}, output);
   }
   output.append('</ul>');
   if (!opt_sb) return output.toString();
@@ -104,7 +104,7 @@ tpl.ui.feed.Base.listItems_ = function(opt_data, opt_sb) {
  */
 tpl.ui.feed.Base.listitem_ = function(opt_data, opt_sb) {
   var output = opt_sb || new soy.StringBuilder();
-  output.append('<li class="', CSS_FEED_LIST_ITEM, ' ', (opt_data.defer) ? CSS_DEFER_ELEMENT : '', '"><div class="', CSS_FEED_LIST_ITEM_GRID, '"><div class="', CSS_FEED_LIST_ITEM_ROW, '"><div class="', CSS_FEED_LIST_ITEM_SIDE, '">');
+  output.append('<li class="', CSS_FEED_LIST_ITEM, '"><div class="', CSS_FEED_LIST_ITEM_GRID, '"><div class="', CSS_FEED_LIST_ITEM_ROW, '"><div class="', CSS_FEED_LIST_ITEM_SIDE, '">');
   tpl.ui.feed.Base.icon_(opt_data, output);
   output.append('</div><div class="', CSS_FEED_LIST_ITEM_CONTEXT, '">');
   tpl.ui.feed.Base.likeOrComment_(opt_data, output);
@@ -265,11 +265,11 @@ tpl.ui.feed.Base.photoItem_ = function(opt_data, opt_sb) {
     if (opt_data.item['name']) {
       output.append('<div><a href="', soy.$$escapeHtml(opt_data.item['link']), '">', soy.$$escapeHtml(opt_data.item['name']), '</a></div>');
       if (opt_data.item['properties']) {
-        var propertyList235 = opt_data.item['properties'];
-        var propertyListLen235 = propertyList235.length;
-        for (var propertyIndex235 = 0; propertyIndex235 < propertyListLen235; propertyIndex235++) {
-          var propertyData235 = propertyList235[propertyIndex235];
-          output.append((propertyData235['text']) ? ((propertyData235['name']) ? '<span>' + soy.$$escapeHtml(propertyData235['name']) + ' : </span>' : '') + ((propertyData235['href']) ? '<a href="' + soy.$$escapeHtml(propertyData235['href']) + '">' + soy.$$escapeHtml(propertyData235['text']) + '</a>' : soy.$$escapeHtml(propertyData235['text'])) + '<br />' : '');
+        var propertyList230 = opt_data.item['properties'];
+        var propertyListLen230 = propertyList230.length;
+        for (var propertyIndex230 = 0; propertyIndex230 < propertyListLen230; propertyIndex230++) {
+          var propertyData230 = propertyList230[propertyIndex230];
+          output.append((propertyData230['text']) ? ((propertyData230['name']) ? '<span>' + soy.$$escapeHtml(propertyData230['name']) + ' : </span>' : '') + ((propertyData230['href']) ? '<a href="' + soy.$$escapeHtml(propertyData230['href']) + '">' + soy.$$escapeHtml(propertyData230['text']) + '</a>' : soy.$$escapeHtml(propertyData230['text'])) + '<br />' : '');
         }
       }
     }

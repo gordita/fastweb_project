@@ -14,6 +14,7 @@ goog.require('hw.mock.InfoFeed');
 goog.require('hw.mock.FriendsFeed');
 goog.require('hw.mock.GroupsFeed');
 goog.require('hw.mock.NewsFeed');
+goog.require('hw.mock.NotificationsFeed');
 goog.require('hw.mock.PhotoFeed');
 goog.require('hw.mock.PhotosFeed');
 goog.require('hw.mock.ProfileFeed');
@@ -106,6 +107,7 @@ hw.async.Fb.permissions_ = [
   'friends_website',
   'friends_work_history',
   'manage_friendlists',
+  'manage_notifications',
   'manage_pages',
   'photo_upload',
   'publish_checkins',
@@ -167,6 +169,29 @@ hw.async.Fb.getUser = function(id) {
   return deferred;
 };
 
+
+/**
+ * @param {string} id
+ * @return {goog.async.Deferred}
+ */
+hw.async.Fb.getNotificationsFeed = function(id) {
+  hw.Logger.log('hw.async.Fb.getNotificationsFeed', id);
+  if (hw.config.USE_MOCK_DATA) {
+    return hw.async.Fb.getMockData_(hw.mock.NotificationsFeed);
+  }
+  var deferred = new goog.async.Deferred();
+  var path = '/' + id + '/notifications/?include_read=1';
+  hw.async.Fb.query_(path).addCallback(function(results) {
+    if (results['data'] && goog.isArray(results['data'])) {
+      hw.Logger.log('hw.async.Fb.getNotificationsFeed:success', results);
+      deferred.callback(results);
+    } else {
+      hw.Logger.log('hw.async.Fb.getNotificationsFeed:error', results);
+      deferred.errback(results);
+    }
+  });
+  return deferred;
+};
 
 /**
  * @param {string} id
@@ -461,7 +486,6 @@ hw.async.Fb.getFriends = function(id) {
   var deferred = new goog.async.Deferred();
   hw.async.Fb.checkPermissions().addCallback(
     function(response) {
-
       var path = '/me/friends?fields=id,name,picture';
       hw.async.Fb.query_(path).
         addCallback(
@@ -568,7 +592,8 @@ hw.async.Fb.init_ = function() {
       var cookies = new goog.net.Cookies(document);
       var cookieName = hw.async.Fb.PERMISSIONS_VERSION_NAME;
       cookies.set(cookieName, String(hw.async.Fb.PERMISSIONS_VERSION));
-      hw.async.Fb.accessToken_ = matched[2];
+      window.location.replace(uri.toString());
+      // hw.async.Fb.accessToken_ = matched[2];
     }
   }
 
