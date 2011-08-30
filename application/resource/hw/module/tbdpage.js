@@ -16,7 +16,6 @@ goog.require('tpl.CSS_NAMES');
 hw.module.TbdPage = function() {
   goog.base(this);
 
-  var uri = hw.url.Dispatcher.getWindowUri(true);
   var layout = new hw.layout.StackRows();
 
   var bluebar = new hw.ui.BlueBar();
@@ -24,7 +23,6 @@ hw.module.TbdPage = function() {
 
   var dummy = new hw.ui.BaseComponent();
   layout.addToBody(dummy);
-
 
   this.dummy_ = dummy;
   this.addChild(layout);
