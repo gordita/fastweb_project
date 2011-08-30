@@ -94,6 +94,13 @@ hw.ui.FlyPanel.prototype.touchContext_ = null;
  */
 hw.ui.FlyPanel.prototype.renderSuccessFeed_ = null;
 
+/** @inheritDoc */
+hw.ui.FlyPanel.prototype.disposeInternal = function() {
+  goog.base(this, 'disposeInternal');
+  goog.dom.removeNode(this.panel_);
+  goog.dom.removeNode(this.panelBody_);
+};
+
 
 /** @inheritDoc */
 hw.ui.FlyPanel.prototype.getContentElement = function() {
@@ -109,11 +116,6 @@ hw.ui.FlyPanel.prototype.createTemplate = function(payload) {
   return tpl.ui.FlyPanel.element(payload).toString();
 };
 
-
-/** @inheritDoc */
-hw.ui.FlyPanel.prototype.captureElement = function() {
-  goog.base(this, 'captureElement');
-};
 
 /** @inheritDoc */
 hw.ui.FlyPanel.prototype.getFeed = function() {
@@ -134,13 +136,9 @@ hw.ui.FlyPanel.prototype.getFeed = function() {
 /** @inheritDoc */
 hw.ui.FlyPanel.prototype.releaseElement = function() {
   goog.base(this, 'releaseElement');
-  goog.dom.removeNode(this.panel_);
-  goog.dom.removeNode(this.panelBody_);
   if (this.scroll_) {
     this.scroll_.dispose();
   }
-  this.panel_ = null;
-  this.panelBody_ = null;
   this.touchHandler_.removeAll();
 };
 
