@@ -4,7 +4,6 @@ goog.provide('hw.ui.BlueBar.Options');
 goog.require('hw.dom.ViewportSizeMonitor');
 goog.require('hw.events.EventType');
 goog.require('hw.ui.BaseComponent');
-goog.require('hw.ui.CommandSurface');
 goog.require('hw.url.Navigator');
 goog.require('tpl.CSS_NAMES');
 goog.require('tpl.ui.BlueBar');
@@ -13,13 +12,13 @@ goog.require('tpl.ui.BlueBar');
 /**
  * @param {hw.ui.BlueBar.Options=} opt_options
  * @constructor
- * @extends {hw.ui.CommandSurface}
+ * @extends {hw.ui.BaseComponent}
  */
 hw.ui.BlueBar = function(opt_options) {
   this.options_ = opt_options || new hw.ui.BlueBar.Options();
   goog.base(this);
 };
-goog.inherits(hw.ui.BlueBar, hw.ui.CommandSurface);
+goog.inherits(hw.ui.BlueBar, hw.ui.BaseComponent);
 
 /**
  * @type {hw.ui.BlueBar.Options}

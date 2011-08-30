@@ -5,6 +5,7 @@ goog.require('goog.dom.classes');
 goog.require('hw.Logger');
 goog.require('hw.async.Fb');
 goog.require('hw.async.ModuleLoader');
+goog.require('hw.dom.ClickInjector');
 goog.require('hw.events.AppEventTarget');
 goog.require('hw.events.EventType');
 goog.require('hw.layout.FullView');
@@ -65,6 +66,13 @@ hw.ui.Chrome.prototype.startScreen_ = null;
 hw.ui.Chrome.prototype.urlDispatcher_ = null;
 
 
+/**
+ * @type {hw.dom.ClickInjector}
+ * @private
+ */
+hw.ui.Chrome.prototype.clickInjector_ = null;
+
+
 /** @inheritDoc */
 hw.ui.Chrome.prototype.disposeInternal = function() {
   goog.base(this, 'disposeInternal');
@@ -80,6 +88,8 @@ hw.ui.Chrome.prototype.captureElement = function() {
     hw.events.AppEventTarget.getInstance(),
     hw.events.EventType.LOGIN,
     this.onLogin_);
+
+  this.clickInjector_ = new hw.dom.ClickInjector(this.getDom().getWindow());
 
   this.restart_();
 };
@@ -175,6 +185,8 @@ hw.ui.Chrome.prototype.start_ = function() {
 /** @inheritDoc */
 hw.ui.Chrome.prototype.releaseElement = function() {
   goog.base(this, 'releaseElement');
+  this.clickInjector_.dispose();
+  this.clickInjector_ = null;
   this.urlDispatcher_.dispose();
   this.urlDispatcher_ = null;
 };

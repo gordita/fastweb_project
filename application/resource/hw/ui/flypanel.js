@@ -254,7 +254,7 @@ hw.ui.FlyPanel.prototype.onTouchMove_ = function(evt) {
   this.touchContext_.lastTouchY1 = touch.clientY;
 
   var deltaY = touch.clientY - this.touchContext_.startClientY;
-  var newY = this.touchContext_.startY_ + deltaY;
+  var newY = this.touchContext_.startY + deltaY;
   if (newY < this.touchContext_.minY) {
     newY = this.touchContext_.minY;
   } else if (newY > this.touchContext_.maxY) {
@@ -271,7 +271,7 @@ hw.ui.FlyPanel.prototype.onTouchMove_ = function(evt) {
  */
 hw.ui.FlyPanel.prototype.onTouchEnd_ = function(evt) {
   this.touchHandler_.removeAll();
-  evt.preventDefault();
+  // evt.preventDefault();
 
 
   if (!this.touchContext_.moved) {
